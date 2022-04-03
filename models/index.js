@@ -13,7 +13,7 @@ const listContacts = async () => {
 
 const getContactById = async (contactId) => {
   const contacts = await listContacts()
-  const contacGetId = contacts.find((e) => String(e.id) === contacGetId)
+  const contacGetId = contacts.find((e) => String(e.id) === contactId)
   if (!contacGetId) return null
   return contacGetId
 }
