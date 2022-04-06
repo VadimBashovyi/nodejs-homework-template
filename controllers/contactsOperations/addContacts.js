@@ -1,8 +1,7 @@
-const contactsOperation = require('../../models')
+const { Contact } = require('../../models')
 
 const addContactsControllers = async (req, res) => {
-  const data = req.body
-  const newContact = await contactsOperation.addContact(data)
+  const newContact = await Contact.create(req.body)
   res.status(201).json(newContact)
 }
 
